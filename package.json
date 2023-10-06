@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.1",
+    "@fontsource-variable/crimson-pro": "^5.0.13",
+    "@fontsource/hind-guntur": "^5.0.8",
+    "@fontsource/hind-vadodara": "^5.0.14",
     "astro": "^3.2.3",
     "tailwindcss": "^3.3.3"
   },
