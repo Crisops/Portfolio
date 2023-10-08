@@ -1,0 +1,18 @@
+---
+import AnimateImg from "../react/AnimateImg";
+import ButtonContact from "./ButtonContact.astro";
+import ButtonViewProyects from "./ButtonViewProyects.astro";
+
+---
+
+<section class="relative w-screen h-screen grid grid-cols-2 pointer-events-none">
+  <div class="flex gap-9 flex-col justify-center px-20">
+    <h1 class="text-9xl font-Crimson_Pro font-extrabold uppercase mb-4">Cristian Alejandro</h1>
+    <p class="text-xl text-gray-800 font-Hind_Guntur max-w-lg ">Why leave your ideas up in the air when you can make them come true?</p>
+    <div class="flex justify-center gap-24 [&>a]:py-2 [&>a]:px-6 [&>a]:w-36 [&>a]:h-12">
+      <ButtonContact/>
+      <ButtonViewProyects/>
+    </div>
+  </div>
+  <AnimateImg client:load/>
+</section>

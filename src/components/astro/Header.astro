@@ -1,0 +1,17 @@
+---
+import ButtonLanguage from "../react/ButtonLanguage";
+import ButtonTheme from "../react/ButtonTheme";
+const logo = "<Cs/>"
+---
+
+<header class="absolute top-0 left-0 py-5 px-20 w-full flex justify-between items-center">
+  <span class="text-black font-Crimson_Pro font-bold text-5xl">{logo}</span>
+  <div class="flex gap-4">
+    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#4E0601] via-[#C9040C] to-[#F95E04] before:absolute before:inset-[1px] before:bg-white before:rounded-3xl">
+      <ButtonTheme client:idle/>
+    </div>
+    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#232123]  to-[#BEBEBE] before:absolute before:inset-[1px] before:bg-white before:rounded-3xl">
+      <ButtonLanguage client:idle/>
+    </div>
+  </div>
+</header>
