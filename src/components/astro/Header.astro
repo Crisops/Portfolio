@@ -5,13 +5,13 @@ const logo = "<Cs/>"
 ---
 
 <header class="absolute top-0 left-0 py-5 px-20 w-full flex justify-between items-center">
-  <span class="text-black font-Crimson_Pro font-bold text-5xl">{logo}</span>
-  <div class="flex gap-4">
-    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#4E0601] via-[#C9040C] to-[#F95E04] before:absolute before:inset-[1px] before:bg-white before:rounded-3xl">
-      <ButtonTheme client:idle/>
-    </div>
-    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#232123]  to-[#BEBEBE] before:absolute before:inset-[1px] before:bg-white before:rounded-3xl">
+  <span class="animate-fade-right animate-once animate-duration-500 animate-normal text-black font-Crimson_Pro font-bold text-5xl transition-colors duration-300 dark:text-white">{logo}</span>
+  <div class="animate-fade-left animate-once animate-duration-500 flex gap-4">
+    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#232123]  to-[#BEBEBE] before:absolute before:inset-[1px] before:bg-white before:rounded-3xl dark:before:bg-[#0F0101]">
       <ButtonLanguage client:idle/>
+    </div>
+    <div class="relative w-[86px] h-8 rounded-3xl bg-gradient-to-r from-[#232123]  to-[#BEBEBE] transition-colors duration-300 before:absolute before:inset-[1px] before:bg-white before:rounded-3xl before:transition-colors before:duration-300 dark:bg-gradient-to-r dark:from-[#190101] dark:via-[#A50002] dark:to-[#FF030B] dark:before:bg-[#0F0101]">
+      <ButtonTheme client:only="react"/>
     </div>
   </div>
 </header>

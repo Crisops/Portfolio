@@ -10,7 +10,8 @@ module.exports = {
     },
     extend: {
       gridTemplateColumns: {
-        16: 'repeat(auto-fit, minmax(50px, 1fr))'
+        16: 'repeat(auto-fit, minmax(50px, 1fr))',
+        15: 'repeat(auto-fit, minmax(20px, 1fr))'
       },
       keyframes: {
         btnViewProyect: {
@@ -27,5 +28,7 @@ module.exports = {
       btnViewProyect: '5s linear infinite'
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwindcss-animated')
+  ]
 }
