@@ -30,7 +30,7 @@ const MenuNavbar = () => {
         <ul className='relative right-8 flex flex-grow flex-col justify-between gap-1'>
           {
             links.map((el, index) => (
-              <li key={index} className='relative flex-grow text-right before:content-[""] before:absolute before:w-8 before:h-[3px] before:bg-black before:top-1/2 dark:before:bg-[#4E0601]'> <LinkMenu id={el.id} title={el.title} /></li>
+              <li key={index} className='relative flex-grow text-right before:content-[""] before:absolute before:w-8 before:h-[3px] before:bg-black before:top-1/2 dark:before:bg-[#4E0601]'><LinkMenu id={el.id} title={el.title} /></li>
             ))
           }
         </ul>

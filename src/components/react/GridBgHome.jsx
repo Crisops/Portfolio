@@ -40,7 +40,7 @@ const GridBgHome = ({ children }) => {
       {
 
         [...Array(total)].map((rect, index) => (
-          <div key={index} ref={item} id='item' className='bg-white dark:bg-[#0F0101] border border-slate-100 hover:bg-gray-100 dark:hover:bg-[#0C0101] dark:border-none' onClick={() => handleClick(index)}></div>
+          <div key={index} ref={item} id='item' className='bg-white dark:bg-[#0F0101] hover:bg-gray-100 dark:hover:bg-[#0C0101]' onClick={() => handleClick(index)}></div>
         ))
 
       }
