@@ -4,14 +4,16 @@ import SectionHome from '../components/astro/SectionHome.astro';
 import GridBgHome from '../components/react/GridBgHome';
 import Layout from '../layouts/Layout.astro';	
 import MenuNavbar from '../components/react/MenuNavbar'
+import SectionAbout from '../components/astro/SectionAbout.astro';
 ---
 
 <Layout title="Crisops | Home">
-	<main class="relative w-full min-h-screen">
-		<MenuNavbar/>
+	<main class="relative w-full min-h-screen overflow-hidden">
+		<MenuNavbar client:load/>
 		<GridBgHome client:only="react">
 			<Header/>
 		</GridBgHome>
 		<SectionHome/>
+		<SectionAbout/>
 	</main>
 </Layout>
