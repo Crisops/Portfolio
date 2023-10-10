@@ -1,4 +1,4 @@
-import anime from 'animejs/lib/anime.es.js'
+import anime from '../../node_modules/animejs/lib/anime.es.js'
 
 export const animeGridHome = (id, column, row) => {
   anime({
@@ -26,6 +26,7 @@ export const animateImg = (target) => {
     loop: false
   })
   timeLine.add({
+    rotate: '1turn',
     scale: 0,
     borderRadius: '50%'
   })
@@ -37,22 +38,32 @@ export const animateImg = (target) => {
       }
     })
     .add({
-      scale: 0.4,
+      scale: 0.6,
       borderRadius: '50%'
     })
     .add({
-      scale: 0.6,
-      borderRadius: '0%'
-    })
-    .add({
-      scale: 0.7,
-      borderRadius: '50%',
-      opacity: 0
-    })
-    .add({
       scale: 1,
-      duration: 4000,
+      duration: 2500,
       borderRadius: '0%',
       opacity: 1
+    })
+}
+
+export const animeLava = (target) => {
+  const timeLine = anime.timeline({
+    targets: target,
+    easing: 'linear',
+    loop: true,
+    duration: 3000,
+    delay: anime.stagger(200)
+  })
+  timeLine.add({
+    translateX: '100%'
+  })
+    .add({
+      translateX: '-100%'
+    })
+    .add({
+      translateX: '100%'
     })
 }
