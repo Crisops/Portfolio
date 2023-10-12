@@ -1,17 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BgAboutLava } from './Icons'
-import { animeLava } from '../../helpers/anime'
+// import { animeLineLava } from '../../helpers/anime'
 
 const SectionAbout = () => {
+  const [lava, setLava] = useState(false)
+  const [size, setSize] = useState(null)
+  const [changeSize, setChangeSize] = useState({})
+
+  const container = useRef(null)
+
   useEffect(() => {
-    const circleLava = document.querySelectorAll('path[data-circle]')
-    animeLava(circleLava)
-  }, [])
+    const theme = window.localStorage.getItem('theme')
+    console.log(theme)
+    const { width, height } = container.current.getBoundingClientRect()
+
+    setChangeSize({ ...changeSize, width, height, theme })
+
+    setLava(true)
+
+    window.addEventListener('resize', setSize)
+    return () => {
+      window.removeEventListener('resize', setSize)
+      setLava(false)
+    }
+  }, [size])
 
   return (
-    <section id='about' className='relative w-full h-screen'>
-      <div className='relative bg-fixed bg-no-repeat w-full h-full'>
-        <BgAboutLava />
+    <section ref={container} id='about' className='relative w-full h-screen'>
+      <div className='absolute w-full h-full'>
+        {lava && <BgAboutLava props={changeSize} />}
       </div>
     </section>
   )

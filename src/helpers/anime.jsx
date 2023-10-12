@@ -49,21 +49,22 @@ export const animateImg = (target) => {
     })
 }
 
-export const animeLava = (target) => {
-  const timeLine = anime.timeline({
-    targets: target,
-    easing: 'linear',
-    loop: true,
-    duration: 3000,
-    delay: anime.stagger(200)
-  })
-  timeLine.add({
-    translateX: '100%'
-  })
-    .add({
-      translateX: '-100%'
-    })
-    .add({
-      translateX: '100%'
-    })
-}
+// export const animeLava = (target) => {
+//   const timeLine = anime.timeline({
+//     targets: target,
+//     easing: 'linear',
+//     loop: 1,
+//     duration: 3000,
+//     delay: anime.stagger(200)
+//   })
+//   timeLine.add({
+//     translateX: '100%'
+//   })
+//     .add({
+//       opacity: 1,
+//       translateX: '-100%'
+//     })
+//     .add({
+//       translateX: '100%'
+//     })
+// }

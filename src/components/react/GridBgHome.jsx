@@ -7,10 +7,19 @@ const GridBgHome = ({ children }) => {
   const [total, setTotal] = useState(0)
   const [sizeWindow, setSizeWindow] = useState(null)
 
+  const [theme, setTheme] = useState(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : null
+  )
+
   const item = useRef(null)
 
   useEffect(() => {
     handleSize()
+    if (window.localStorage.getItem('theme')) {
+      setTheme(window.localStorage.getItem('theme'))
+    } else {
+      window.localStorage.setItem('theme', theme)
+    }
 
     window.addEventListener('resize', (e) => setSizeWindow(e.target.innerWidth))
 
