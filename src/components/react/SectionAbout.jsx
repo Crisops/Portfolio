@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { BgAboutLava } from './Icons'
+
 // import { animeLineLava } from '../../helpers/anime'
 
 const SectionAbout = () => {
@@ -10,9 +11,8 @@ const SectionAbout = () => {
   const container = useRef(null)
 
   useEffect(() => {
-    const theme = window.localStorage.getItem('theme')
-    console.log(theme)
     const { width, height } = container.current.getBoundingClientRect()
+    const theme = window.localStorage.getItem('theme')
 
     setChangeSize({ ...changeSize, width, height, theme })
 
@@ -24,6 +24,10 @@ const SectionAbout = () => {
       setLava(false)
     }
   }, [size])
+
+  // setThemeSelect(getThemeUser(window.localStorage.getItem('theme')))
+
+  // const theme = getThemeUser(window.localStorage.getItem('theme'))
 
   return (
     <section ref={container} id='about' className='relative w-full h-screen'>

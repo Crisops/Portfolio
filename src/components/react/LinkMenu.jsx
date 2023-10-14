@@ -12,7 +12,7 @@ const LinkMenu = ({ id, title }) => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.7
+      threshold: 0.5
     }
 
     const sectionIntersecting = (entries) => {
@@ -24,11 +24,17 @@ const LinkMenu = ({ id, title }) => {
       })
     }
 
-    const observer = new window.IntersectionObserver(sectionIntersecting, options);
+    const observer = new window.IntersectionObserver(sectionIntersecting, options)
 
-    (entrySection === id)
-      ? setColor('#FF0000')
-      : setColor('#898989')
+    if (entrySection === 'about' && entrySection === id) {
+      setColor('#000000')
+    } else {
+      if (entrySection === id) {
+        setColor('#FF0000')
+      } else {
+        setColor('#BEBEBE')
+      }
+    }
 
     allSection.forEach(section => {
       observer.observe(section)

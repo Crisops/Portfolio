@@ -277,7 +277,7 @@ export const IconLight = ({ handleChangeTheme }) => (
 
 export const BgAboutLava = ({ props }) => {
   const { width, height, theme } = props
-  console.log(theme)
+  // console.log(theme)
 
   return (
     <svg id='e4k8Fi6ChjI1' width={`${width}`} height={`${height}`} viewBox={`0 0 ${width} ${height}`} shapeRendering='geometricPrecision' textRendering='geometricPrecision'>
