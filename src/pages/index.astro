@@ -5,6 +5,7 @@ import GridBgHome from '../components/react/GridBgHome';
 import Layout from '../layouts/Layout.astro';	
 import MenuNavbar from '../components/react/MenuNavbar'
 import SectionAbout from '../components/react/SectionAbout';
+import SectionSkills from '../components/astro/SectionSkills.astro';
 
 ---
 
@@ -16,6 +17,7 @@ import SectionAbout from '../components/react/SectionAbout';
 		</GridBgHome>
 		<SectionHome/>
 		<SectionAbout client:only="react"/>
+		<SectionSkills/>
 	</main>
 </Layout>
 

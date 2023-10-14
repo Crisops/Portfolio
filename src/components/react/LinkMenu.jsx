@@ -7,25 +7,6 @@ const LinkMenu = ({ id, title }) => {
   const [color, setColor] = useState('#FF0000')
 
   useEffect(() => {
-    const allSection = document.querySelectorAll('section')
-
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5
-    }
-
-    const sectionIntersecting = (entries) => {
-      entries.forEach(entry => {
-        const { isIntersecting, target } = entry
-        if (isIntersecting) {
-          setEntrySection(target.id)
-        }
-      })
-    }
-
-    const observer = new window.IntersectionObserver(sectionIntersecting, options)
-
     if (entrySection === 'about' && entrySection === id) {
       setColor('#000000')
     } else {
@@ -35,11 +16,30 @@ const LinkMenu = ({ id, title }) => {
         setColor('#BEBEBE')
       }
     }
-
-    allSection.forEach(section => {
-      observer.observe(section)
-    })
   }, [entrySection])
+
+  const allSection = document.querySelectorAll('section')
+
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.9
+  }
+
+  const sectionIntersecting = (entries) => {
+    entries.forEach(entry => {
+      const { isIntersecting, target } = entry
+      if (isIntersecting) {
+        setEntrySection(target.id)
+      }
+    })
+  }
+
+  const observer = new window.IntersectionObserver(sectionIntersecting, options)
+
+  allSection.forEach(section => {
+    observer.observe(section)
+  })
 
   return (
 
