@@ -6,7 +6,8 @@ import Layout from '../layouts/Layout.astro';
 import MenuNavbar from '../components/react/MenuNavbar'
 import SectionAbout from '../components/react/SectionAbout';
 import SectionSkills from '../components/astro/SectionSkills.astro';
-import SectionProjects from '../components/astro/SectionProjects.astro';
+import SectionProjects from '../components/react/SectionProjects.jsx';
+import SectionContact from '../components/astro/SectionContact.astro';
 
 ---
 
@@ -20,7 +21,8 @@ import SectionProjects from '../components/astro/SectionProjects.astro';
 		<SectionAbout client:only="react"/>
 		<SectionSkills/>
 		<SectionProjects client:visible/>
-	</main>
+		<SectionContact/>
+	</main> 
 </Layout>
 
 <!-- <script>
