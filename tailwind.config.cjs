@@ -16,7 +16,7 @@ module.exports = {
       keyframes: {
         btnViewProyect: {
           '0%': {
-            tranform: 'rotate(0deg)'
+            transform: 'rotate(0deg)'
           },
           '100%': {
             transform: 'rotate(360deg)'

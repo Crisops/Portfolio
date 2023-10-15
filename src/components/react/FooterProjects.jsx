@@ -9,8 +9,8 @@ const FooterProjects = ({ urlGithub }) => {
         <IconCss />
       </div>
       <div data-atropos-offset='5' className='flex justify-between items-center gap-2 px-2 [&>a]:flex [&>a]:justify-evenly [&>a]:items-center'>
-        <ButtonNavigateProjects url={urlGithub} bgColor='#0F0E0F' title='GitHub' icon={<IconGitHub />} />
-        <ButtonNavigateProjects url={urlGithub} bgColor='#FF030B' title='Site' icon={<IconWorldSite />} />
+        <ButtonNavigateProjects url={urlGithub} bgColor='bg-zinc-950' title='GitHub' icon={<IconGitHub />} />
+        <ButtonNavigateProjects url={urlGithub} bgColor='bg-red-600' title='Site' icon={<IconWorldSite />} />
       </div>
     </footer>
   )
