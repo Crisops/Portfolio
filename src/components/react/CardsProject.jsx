@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import Card from './Card'
 
-const CardProject = ({ urlImg, urlGithub }) => {
+const CardProject = ({ urlImg, urlGithub, urlSite }) => {
   const overlay = useRef(null)
   const tapeHover = useRef(null)
   const tape = useRef(null)
@@ -24,7 +24,7 @@ const CardProject = ({ urlImg, urlGithub }) => {
 
   return (
     <article className='relative'>
-      <div ref={tapeHover} className='absolute -top-0 left-0 flex justify-center items-start w-44 h-20 bg-[#FA3538] rounded-tl-lg rounded-tr-lg py-2 transition duration-1000'>
+      <div ref={tapeHover} className='absolute -top-0 left-0 flex justify-center items-start w-44 h-20 bg-[#FA3538] rounded-tl-lg rounded-tr-lg py-2 transition duration-1000 dark:bg-[#FA4003]'>
         <span className='text-white font-bold font-Hind_Guntur text-base text-center uppercase'>Layout Instagram</span>
       </div>
       <Card
@@ -35,6 +35,7 @@ const CardProject = ({ urlImg, urlGithub }) => {
         urlImg={urlImg}
         overlayHover={overlayHover}
         urlGithub={urlGithub}
+        urlSite={urlSite}
       />
     </article>
   )

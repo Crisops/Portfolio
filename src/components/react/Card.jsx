@@ -4,7 +4,7 @@ import CardFooterProjects from './CardFooterProject'
 import CardImage from './CardImage'
 
 const Card = ({ ...c }) => {
-  const { handleEnter, handLeave, overlay, tape, urlImg, overlayHover, urlGithub } = c
+  const { handleEnter, handLeave, overlay, tape, urlImg, overlayHover, urlGithub, urlSite } = c
 
   return (
     <Atropos
@@ -20,11 +20,11 @@ const Card = ({ ...c }) => {
     >
       <div ref={overlay} className='absolute w-full h-full bg-gradient-to-t from-black z-[2] rounded-lg transition-transform duration-300'></div>
       <CardImage urlImg={urlImg} />
-      <div ref={tape} className='absolute -top-3 -left-14 flex justify-center items-end w-44 h-20 bg-[#ff0000] px-10 -rotate-45 transition duration-300'>
+      <div ref={tape} className='absolute -top-3 -left-14 flex justify-center items-end w-44 h-20 bg-[#ff0000] px-10 -rotate-45 transition duration-300 dark:bg-[#FA4003]'>
         <span className='text-white font-bold font-Hind_Guntur text-base text-center'>Layout Instagram</span>
       </div>
-      <div ref={overlayHover} className='absolute w-full h-full bg-gradient-to-t from-[#ff00009c] from-10% via-transparent to-transparent z-[2] rounded-lg translate-y-full transition-transform duration-300'></div>
-      <CardFooterProjects urlGithub={urlGithub} />
+      <div ref={overlayHover} className='absolute w-full h-full bg-gradient-to-t from-[#ff00009c] from-10% via-transparent to-transparent z-[2] rounded-lg translate-y-full transition-transform duration-300 pointer-events-none dark:from-[#ff66009c]'></div>
+      <CardFooterProjects urlGithub={urlGithub} urlSite={urlSite} />
     </Atropos>
   )
 }
