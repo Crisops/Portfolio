@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import CardProject from './CardsProject'
+import ButtonShowProjects from './ButtonShowProjects'
 
 const SectionProjects = () => {
   const [viewMore, setViewMore] = useState(false)
@@ -12,7 +13,7 @@ const SectionProjects = () => {
     <section id='projects' className='relative w-full h-full'>
       <div className={`relative flex flex-wrap w-full
       ${viewMore ? 'h-full' : 'h-[700px]'} justify-center gap-10 px-40 
-      ${viewMore ? '' : 'overflow-hidden'} before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-t from-[#0F0101]
+      ${viewMore ? '' : 'overflow-hidden'} before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-t from-white dark:before:bg-gradient-to-t dark:from-[#0F0101]
        ${viewMore ? '' : 'before:z-[10]'}`}
       >
         <CardProject
@@ -47,11 +48,7 @@ const SectionProjects = () => {
         />
       </div>
       <div className='absolute top-0 left-0 w-full h-full  pointer-events-none'>
-        <button
-          onClick={handleMoreProject} className={`absolute ${viewMore ? 'left-5' : 'left-1/2'} ${viewMore ? 'bottom-0' : 'bottom-20'} px-7 py-3
-        ${viewMore ? 'bg-[#770000]' : 'bg-[#210000]'}  rounded-md text-white font-bold font-Hind_Guntur uppercase transition-colors pointer-events-auto z-[11]  hover:bg-[#180000]`}
-        >{viewMore ? 'Hidden' : 'Show More...'}
-        </button>
+        <ButtonShowProjects handleMoreProject={handleMoreProject} viewMore={viewMore} />
       </div>
     </section>
 
