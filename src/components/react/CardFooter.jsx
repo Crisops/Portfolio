@@ -2,7 +2,7 @@ import ButtonNavigateProjects from './ButtonNavigateProjects'
 import CardTechnologies from './CardTechnologies'
 import { IconGitHub, IconWorldSite } from './Icons'
 
-const CardFooterProjects = ({ urlGithub, urlSite }) => {
+const CardFooter = ({ urlGithub, urlSite }) => {
   return (
     <footer className='absolute flex justify-between bottom-0 w-full h-24 z-[3] rounded-b-lg pointer-events-none'>
       <CardTechnologies />
@@ -14,4 +14,4 @@ const CardFooterProjects = ({ urlGithub, urlSite }) => {
   )
 }
 
-export default CardFooterProjects
+export default CardFooter

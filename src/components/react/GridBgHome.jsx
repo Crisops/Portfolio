@@ -38,9 +38,10 @@ const GridBgHome = ({ children }) => {
     animeGridHome(id, column, row)
     setTimeout(() => {
       const rect = document.querySelectorAll(`#${item.current.id}`)
+      console.log(rect)
       const array = Array.from(rect)
       array.forEach(el => el.style.removeProperty('background-color'))
-    }, 4000)
+    }, 7000)
   }
 
   return (

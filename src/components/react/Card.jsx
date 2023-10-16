@@ -1,6 +1,6 @@
 import Atropos from 'atropos/react'
 import 'atropos/css'
-import CardFooterProjects from './CardFooterProject'
+import CardFooter from './CardFooter'
 import CardImage from './CardImage'
 
 const Card = ({ ...c }) => {
@@ -24,7 +24,7 @@ const Card = ({ ...c }) => {
         <span className='text-white font-bold font-Hind_Guntur text-base text-center'>Layout Instagram</span>
       </div>
       <div ref={overlayHover} className='absolute w-full h-full bg-gradient-to-t from-[#ff00009c] from-10% via-transparent to-transparent z-[2] rounded-lg translate-y-full transition-transform duration-300 pointer-events-none dark:from-[#ff66009c]'></div>
-      <CardFooterProjects urlGithub={urlGithub} urlSite={urlSite} />
+      <CardFooter urlGithub={urlGithub} urlSite={urlSite} />
     </Atropos>
   )
 }

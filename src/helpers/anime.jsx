@@ -48,3 +48,19 @@ export const animateImg = (target) => {
       opacity: 1
     })
 }
+
+export const animeStar = (target) => {
+  const timeLine = anime.timeline({
+    targets: target,
+    duration: 500,
+    easing: 'linear',
+    // loop: true, // Se comenta por el consumo masivo de recursos de la computadora
+    delay: (el, i) => 100 * i
+  })
+  timeLine.add({
+    opacity: 0
+  })
+    .add({
+      opacity: 1
+    })
+}
