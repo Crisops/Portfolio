@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { BgAboutLava } from './Icons'
 
-// import { animeLineLava } from '../../helpers/anime'
-
 const SectionAbout = () => {
   const [lava, setLava] = useState(false)
   const [size, setSize] = useState(null)
@@ -24,10 +22,6 @@ const SectionAbout = () => {
       setLava(false)
     }
   }, [size])
-
-  // setThemeSelect(getThemeUser(window.localStorage.getItem('theme')))
-
-  // const theme = getThemeUser(window.localStorage.getItem('theme'))
 
   return (
     <section ref={container} id='about' className='relative w-full h-screen'>

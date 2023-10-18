@@ -1,8 +1,13 @@
 ---
+import ContactShoting from "../react/ContactShoting";
 import ContactStar from "../react/ContactStar";
+import ContactPlanet from './ContactPlanet.astro'
 
 ---
 
 <section id="contact" class="relative w-full h-screen overflow-hidden">
-  <ContactStar client:visible/>
+  <ContactPlanet>
+    <ContactStar client:visible/>
+    <ContactShoting client:visible/>
+  </ContactPlanet>
 </section>

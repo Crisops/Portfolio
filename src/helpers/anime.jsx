@@ -64,3 +64,27 @@ export const animeStar = (target) => {
       opacity: 1
     })
 }
+
+export const animeStarShoting = (starShoting) => {
+  anime({
+    targets: starShoting,
+    easing: 'linear',
+    loop: 2,
+    delay: (el, i) => 1000 * i,
+    opacity: [
+      {
+        duration: 700,
+        value: '1'
+      }
+    ],
+    width: [
+      {
+        value: '150px'
+      },
+      {
+        value: '0px'
+      }
+    ],
+    translateX: -350
+  })
+}

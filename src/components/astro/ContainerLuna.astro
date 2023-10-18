@@ -1,0 +1,40 @@
+<div id="containerLuna">
+  <div id="luna" class="absolute top-32 right-7 w-24 h-24 flex justify-center items-center bg-slate-100 shadow-[inset_1px_-1px_8px_#444344] rounded-full dark:bg-black dark:shadow-[inset_1px_-1px_8px_#FA4003]">
+    <span class="text-black font-bold uppercase text-2xl dark:text-yellow-300">JS</span>
+  </div>
+</div>
+
+<style>
+
+  #containerLuna{
+    transform-style: preserve-3d;
+    animation: luna 15s linear infinite;
+  }
+
+  /* @keyframes animateEarth { // Movimiento de la tierra
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: -1000px 0;
+  }
+  } */
+
+  #luna{
+    transform: translateZ(200px);
+    transform-style: preserve-3d;
+    animation: luna2 15s linear infinite;
+  }
+
+@keyframes luna {
+  0%{
+    transform: perspective(1000px) rotateY(-360deg) 
+    translateX(30px)
+  }
+  100%{
+    transform: perspective(1000px) rotateY(0deg)
+    translateX(30px)
+  }
+}
+
+</style>

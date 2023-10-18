@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { IconDark, IconLight } from './Icons.jsx'
 
-// import { getThemeUser } from '../../helpers/getThemeUser.jsx'
-
 const ButtonTheme = () => {
   const [iconTheme, setIconTheme] = useState(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'left-2' : 'right-2')
