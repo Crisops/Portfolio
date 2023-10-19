@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from 'react'
 import { animeGridHome } from '../../helpers/anime'
+import HomeHeader from './HomeHeader'
 
-const GridBgHome = ({ children }) => {
+const GridBgHome = () => {
   const [column, setColumn] = useState(Math.floor(document.body.clientWidth / 50))
   const [row, setRow] = useState(Math.floor(document.body.clientHeight / 50))
   const [total, setTotal] = useState(0)
@@ -46,7 +47,7 @@ const GridBgHome = ({ children }) => {
 
   return (
     <div className='absolute w-full h-full grid grid-cols-16 auto-rows-[50px] dark:bg-[#0F0101]'>
-      {children}
+      <HomeHeader />
       {
 
         [...Array(total)].map((rect, index) => (

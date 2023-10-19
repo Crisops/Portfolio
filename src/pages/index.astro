@@ -1,5 +1,4 @@
 ---
-import Header from '../components/astro/Header.astro';
 import SectionHome from '../components/astro/SectionHome.astro';
 import GridBgHome from '../components/react/GridBgHome';
 import Layout from '../layouts/Layout.astro';	
@@ -14,9 +13,7 @@ import SectionContact from '../components/astro/SectionContact.astro';
 <Layout title="Crisops | Home">
 	<main class="relative w-full min-h-screen overflow-hidden">
 		<MenuNavbar client:only="react"/>
-		<GridBgHome client:only="react">
-			<Header/>
-		</GridBgHome>
+		<GridBgHome client:only="react"/>
 		<SectionHome/>
 		<SectionAbout client:only="react"/>
 		<SectionSkills/>
