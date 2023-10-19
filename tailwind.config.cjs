@@ -21,11 +21,29 @@ module.exports = {
           '100%': {
             transform: 'rotate(360deg)'
           }
+        },
+        circleForm: {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(360deg)'
+          }
+        },
+        circleForm2: {
+          '0%': {
+            transform: 'rotate(360deg)'
+          },
+          '100%': {
+            transform: 'rotate(0deg)'
+          }
         }
       }
     },
     animation: {
-      btnViewProyect: '5s linear infinite'
+      btnViewProyect: '5s linear infinite',
+      circleForm: 'linear infinite',
+      circleForm2: 'linear infinite'
     }
   },
   plugins: [
