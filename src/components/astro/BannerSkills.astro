@@ -2,7 +2,7 @@
 const SvgAll = await Astro.glob('./svg/*.astro')
 
 ---
-<div class="relative w-full h-80 flex justify-center items-center gap-8">
+<div class="relative w-full h-80 flex justify-center items-center gap-14">
   {SvgAll.map(svg => (
     <div class="[&>svg]:w-24 [&>svg]:h-24 [&>span]:uppercase font-bold italic text-center">
       <svg.default />
