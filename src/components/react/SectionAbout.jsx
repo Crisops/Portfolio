@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react'
 import { BgAboutLava } from './Icons'
+import AboutMe from './AboutMe'
 import ThemeContext from '../../context/ThemeContext'
 
 const SectionAbout = () => {
@@ -27,6 +28,7 @@ const SectionAbout = () => {
 
   return (
     <section ref={container} id='about' className='relative w-full h-screen bg-white dark:bg-[#0F0101]'>
+      <AboutMe />
       <div className='absolute w-full h-full'>
         {lava && <BgAboutLava props={changeSize} />}
       </div>
