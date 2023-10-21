@@ -1,21 +1,24 @@
 ---
-import SectionHome from '../components/astro/SectionHome.astro';
-import GridBgHome from '../components/react/GridBgHome';
+import SectionInfoMe from '../components/react/SectionInfoMe.jsx';
 import Layout from '../layouts/Layout.astro';	
 import MenuNavbar from '../components/react/MenuNavbar'
-import SectionAbout from '../components/react/SectionAbout';
 import SectionSkills from '../components/astro/SectionSkills.astro';
 import SectionProjects from '../components/react/SectionProjects.jsx';
 import SectionContact from '../components/astro/SectionContact.astro';
+import ButtonContact from '../components/astro/ButtonContact.astro';
+import ButtonViewProyects from '../components/astro/ButtonViewProyects.astro';
 
 ---
 
 <Layout title="Crisops | Home">
 	<main class="relative w-full min-h-screen overflow-hidden">
 		<MenuNavbar client:only="react"/>
-		<GridBgHome client:only="react"/>
-		<SectionHome/>
-		<SectionAbout client:only="react"/>
+		<SectionInfoMe client:only="react">
+			<div class="flex justify-center gap-24 [&>a]:py-2 [&>a]:px-6 [&>a]:w-36 [&>a]:h-12">
+				<ButtonContact/>
+				<ButtonViewProyects/>
+			</div>
+		</SectionInfoMe>	
 		<SectionSkills/>
 		<SectionProjects client:visible/>
 		<SectionContact/>

@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { BgAboutLava } from './Icons'
+import ThemeContext from '../../context/ThemeContext'
 
 const SectionAbout = () => {
   const [lava, setLava] = useState(false)
@@ -8,9 +9,10 @@ const SectionAbout = () => {
 
   const container = useRef(null)
 
+  const { theme } = useContext(ThemeContext)
+
   useEffect(() => {
     const { width, height } = container.current.getBoundingClientRect()
-    const theme = window.localStorage.getItem('theme')
 
     setChangeSize({ ...changeSize, width, height, theme })
 
@@ -21,10 +23,10 @@ const SectionAbout = () => {
       window.removeEventListener('resize', setSize)
       setLava(false)
     }
-  }, [size])
+  }, [size, theme])
 
   return (
-    <section ref={container} id='about' className='relative w-full h-screen'>
+    <section ref={container} id='about' className='relative w-full h-screen bg-white dark:bg-[#0F0101]'>
       <div className='absolute w-full h-full'>
         {lava && <BgAboutLava props={changeSize} />}
       </div>

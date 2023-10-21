@@ -11,7 +11,7 @@ const SectionProjects = () => {
 
   return (
     <section id='projects' className='relative w-full h-full'>
-      <div className={`relative flex flex-wrap w-full
+      <div className={`relative flex flex-wrap w-full bg-white dark:bg-[#0F0101]
       ${viewMore ? 'h-full' : 'h-[700px]'} justify-center gap-10 px-40 
       ${viewMore ? '' : 'overflow-hidden'} before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-t from-white dark:before:bg-gradient-to-t dark:from-[#0F0101]
        ${viewMore ? '' : 'before:z-[10]'}`}
