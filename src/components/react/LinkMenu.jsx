@@ -4,16 +4,16 @@ const LinkMenu = ({ id, title }) => {
   const link = useRef()
 
   const [entrySection, setEntrySection] = useState('')
-  const [color, setColor] = useState('#FF0000')
+  const [color, setColor] = useState('text-[#FF0000]')
 
   useEffect(() => {
     if (entrySection === 'about' && entrySection === id) {
-      setColor('#000000')
+      setColor('text-[#000000]')
     } else {
       if (entrySection === id) {
-        setColor('#FF0000')
+        setColor('text-[#FF0000]')
       } else {
-        setColor('#BEBEBE')
+        setColor('text-[#BEBEBE]')
       }
     }
   }, [entrySection])
@@ -43,7 +43,7 @@ const LinkMenu = ({ id, title }) => {
 
   return (
 
-    <a href={`#${id}`} style={{ color }} ref={link} className='relative flex w-full h-full justify-end items-center uppercase pr-2 text-black font-bold text-sm font-Crimson_Pro'>{title}</a>
+    <a href={`#${id}`} ref={link} className={`relative flex w-full h-full justify-end items-center uppercase pr-2 ${color} font-bold text-sm font-Crimson_Pro hover:text-red-300`}>{title}</a>
 
   )
 }

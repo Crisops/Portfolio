@@ -12,8 +12,8 @@ const Card = ({ ...c }) => {
       activeOffset={50}
       shadowScale={0.6}
       duration={100}
-      rotateXMax={5}
-      rotateYMax={5}
+      rotateXMax={3}
+      rotateYMax={3}
       onEnter={handleEnter}
       onLeave={handLeave}
       rotate

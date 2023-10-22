@@ -1,24 +1,5 @@
 import anime from '../../node_modules/animejs/lib/anime.es.js'
 
-export const animeGridHome = (id, column, row) => {
-  anime({
-    targets: '#item',
-    backgroundColor: '#F7EBEB',
-    easing: 'linear',
-    duration: 300,
-    delay: anime.stagger(50, { grid: [column, row], from: id }),
-    changeComplete: function () {
-      anime({
-        targets: '#item',
-        backgroundColor: '#FFFFFF',
-        easing: 'linear',
-        duration: 300,
-        delay: anime.stagger(50, { grid: [column, row], from: id })
-      })
-    }
-  })
-}
-
 export const animateImg = (target) => {
   const timeLine = anime.timeline({
     targets: `#${target}`,

@@ -8,7 +8,7 @@ const CardFooter = ({ urlGithub, urlSite }) => {
       <CardTechnologies />
       <div data-atropos-offset='5' className='flex justify-between items-center gap-2 px-2 [&>a]:flex [&>a]:justify-evenly [&>a]:items-center'>
         <ButtonNavigateProjects url={urlGithub} bgColor='bg-zinc-950' title='GitHub' icon={<IconGitHub />} />
-        <ButtonNavigateProjects url={urlSite} bgColor='bg-red-700' title='Site' icon={<IconWorldSite />} />
+        <ButtonNavigateProjects url={urlSite} bgColor='bg-red-700' title='Sitio' icon={<IconWorldSite />} />
       </div>
     </footer>
   )

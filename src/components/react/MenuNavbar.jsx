@@ -4,23 +4,23 @@ const MenuNavbar = () => {
   const links = [
     {
       id: 'home',
-      title: 'home'
+      title: 'Inicio'
     },
     {
       id: 'about',
-      title: 'about'
+      title: 'Acerca'
     },
     {
       id: 'skills',
-      title: 'skills'
+      title: 'Habilidades'
     },
     {
       id: 'projects',
-      title: 'projects'
+      title: 'Proyectos'
     },
     {
       id: 'contact',
-      title: 'contact'
+      title: 'Contacto'
     }
   ]
 
