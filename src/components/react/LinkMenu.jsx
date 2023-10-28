@@ -3,8 +3,16 @@ import { useEffect, useRef, useState } from 'react'
 const LinkMenu = ({ id, title }) => {
   const link = useRef()
 
-  const [entrySection, setEntrySection] = useState('')
+  const [entrySection, setEntrySection] = useState('home')
   const [color, setColor] = useState('text-[#FF0000]')
+
+  const allSection = document.querySelectorAll('section')
+
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.9
+  }
 
   useEffect(() => {
     if (entrySection === 'about' && entrySection === id) {
@@ -18,14 +26,6 @@ const LinkMenu = ({ id, title }) => {
     }
   }, [entrySection])
 
-  const allSection = document.querySelectorAll('section')
-
-  const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.9
-  }
-
   const sectionIntersecting = (entries) => {
     entries.forEach(entry => {
       const { isIntersecting, target } = entry
@@ -36,7 +36,6 @@ const LinkMenu = ({ id, title }) => {
   }
 
   const observer = new window.IntersectionObserver(sectionIntersecting, options)
-
   allSection.forEach(section => {
     observer.observe(section)
   })

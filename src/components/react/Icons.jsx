@@ -187,27 +187,20 @@ export const IconSurprise = ({ focus, animate, fill, darkFill, darkDropShadow })
 )
 
 export const IconDark = ({ handleChangeTheme }) => {
-  const changeTheme = () => {
-    handleChangeTheme()
-  }
-
   return (
-    <svg onClick={changeTheme} className='hover:cursor-pointer' width='20px' height='20px' viewBox='0 0 24 24' fill='none'>
-      <path d='M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' fill='#1C274C' />
+    <svg onClick={handleChangeTheme} className='drop-shadow-[1px_1px_2px_#0d0d0d] hover:cursor-pointer' width='35px' height='35px' viewBox='0 0 24 24' fill='none'>
+      <path d='M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' fill='#121212' />
     </svg>
   )
 }
 
 export const IconLight = ({ handleChangeTheme }) => {
-  const changeTheme = () => {
-    handleChangeTheme()
-  }
   return (
     <svg
-      onClick={changeTheme}
-      className='hover:cursor-pointer'
+      onClick={handleChangeTheme}
+      className='drop-shadow-[1px_1px_2px_#FF1515] hover:cursor-pointer'
       version='1.0' id='Layer_1'
-      width='20px' height='20px' viewBox='0 0 64 64' enableBackground='new 0 0 64 64' xmlSpace='preserve'
+      width='35px' height='35px' viewBox='0 0 64 64' enableBackground='new 0 0 64 64' xmlSpace='preserve'
     >
       <g>
         <path
@@ -224,7 +217,7 @@ export const IconLight = ({ handleChangeTheme }) => {
       c0.143,0.533,0.69,0.85,1.225,0.706l3.863-1.035c0.533-0.143,0.85-0.69,0.707-1.225C12.539,36.644,11.99,36.327,11.457,36.47z'
         />
         <path
-          fillRule='evenodd' clipRule='evenodd' fill='#231F20' d='M49.32,22c0.277,0.479,0.888,0.643,1.367,0.366l8.66-5
+          fillRule='evenodd' clipRule='evenodd' fill='#FF1515' d='M49.32,22c0.277,0.479,0.888,0.643,1.367,0.366l8.66-5
       c0.479-0.276,0.643-0.888,0.365-1.366c-0.275-0.479-0.887-0.642-1.365-0.365l-8.66,5C49.208,20.912,49.045,21.521,49.32,22z'
         />
         <path
@@ -263,7 +256,7 @@ export const IconLight = ({ handleChangeTheme }) => {
       c0.277-0.479,0.115-1.09-0.364-1.367l-8.661-5C5.176,15.356,4.564,15.52,4.287,16C4.013,16.477,4.176,17.089,4.654,17.365z'
         />
         <path
-          fillRule='evenodd' clipRule='evenodd' fill='#231F20' d='M52.027,38.4l3.863,1.035c0.535,0.145,1.082-0.176,1.225-0.709
+          fillRule='evenodd' clipRule='evenodd' fill='#FF1515' d='M52.027,38.4l3.863,1.035c0.535,0.145,1.082-0.176,1.225-0.709
       c0.144-0.532-0.172-1.079-0.707-1.223l-3.863-1.035c-0.531-0.145-1.081,0.173-1.225,0.707C51.176,37.709,51.496,38.256,52.027,38.4
       z'
         />
