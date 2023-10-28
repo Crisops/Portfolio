@@ -1,8 +1,10 @@
 export const getStart = (num) => {
   const array = []
   for (let i = 0; i < num; i++) {
-    const vw = window.innerWidth
-    const vh = window.innerHeight
+    // eslint-disable-next-line no-undef
+    const vw = innerWidth
+    // eslint-disable-next-line no-undef
+    const vh = innerHeight
     const pl = `${Math.random() * vw}px`
     const pt = `${Math.random() * vh}px`
 

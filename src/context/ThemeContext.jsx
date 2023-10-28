@@ -4,12 +4,15 @@ const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
   const [iconTheme, setIconTheme] = useState(() =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'null')
+    // eslint-disable-next-line no-undef
+    matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'null')
   const [theme, setTheme] = useState('')
 
   useEffect(() => {
-    setIconTheme(window.localStorage.getItem('theme'))
-    setTheme(window.localStorage.getItem('theme'));
+    // eslint-disable-next-line no-undef
+    setIconTheme(localStorage.getItem('theme'))
+    // eslint-disable-next-line no-undef
+    setTheme(localStorage.getItem('theme'));
     (theme === 'null')
       ? document.documentElement.classList.remove('dark')
       : document.documentElement.classList.add('dark')
@@ -17,10 +20,12 @@ export const ThemeProvider = ({ children }) => {
 
   const handleChangeTheme = (e) => {
     if (theme === 'dark') {
-      window.localStorage.setItem('theme', null)
+      // eslint-disable-next-line no-undef
+      localStorage.setItem('theme', null)
       setTheme(e)
     } else {
-      window.localStorage.setItem('theme', 'dark')
+      // eslint-disable-next-line no-undef
+      localStorage.setItem('theme', 'dark')
       setTheme(e)
     }
   }

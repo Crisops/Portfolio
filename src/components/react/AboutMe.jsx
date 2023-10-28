@@ -21,7 +21,8 @@ const AboutMe = () => {
       })
     }
 
-    const observer = new window.IntersectionObserver(sectionAbout, options)
+    // eslint-disable-next-line no-undef
+    const observer = new IntersectionObserver(sectionAbout, options)
 
     observer.observe(section.current)
   }, [])

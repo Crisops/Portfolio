@@ -3,7 +3,7 @@ import ContainerLuna from "./ContainerLuna.astro";
 
 ---
 
-<div id="earth" class="absolute -right-[15%] -bottom-[35%] w-[1000px] h-[1000px] rounded-full bg-[radial-gradient(#efefef,rgba(239,239,239,.7)),url(/img/jupiter.webp)] bg-cover bg-repeat-x -rotate-45 dark:bg-[radial-gradient(#000,rgba(0,0,0,.97)),url(/img/jupiter.webp)] shadow-[inset_0px_-4px_23px_6px_#898989,0px_0px_200px_#dcdcdc,0px_0px_70px_#898989,0px_0px_30px_#444344] dark:shadow-[inset_0px_-4px_23px_6px_#C9040C,0_2px_200px_#FF030B,0_2px_70px_#FA4003,0_2px_30px_#F95E04]">
+<div id="earth" class="absolute -right-[15%] -bottom-[35%] w-[1000px] h-[1000px] rounded-full bg-[radial-gradient(#efefef,rgba(239,239,239,.7)),url(/img/jupiter.webp)] bg-cover bg-repeat-x -rotate-45 animate-[earth_5s_linear_infinite] dark:bg-[radial-gradient(#000,rgba(0,0,0,.97)),url(/img/jupiter.webp)] shadow-[inset_0px_-4px_23px_6px_#898989,0px_0px_200px_#dcdcdc,0px_0px_70px_#898989,0px_0px_30px_#444344] dark:shadow-[inset_0px_-4px_23px_6px_#C9040C,0_2px_200px_#FF030B,0_2px_70px_#FA4003,0_2px_30px_#F95E04]">
   <ContainerLuna/>
 </div>
 
@@ -12,4 +12,23 @@ import ContainerLuna from "./ContainerLuna.astro";
     animation: animateEarth 15s linear infinite;
     transform-style: preserve-3d;
   }
+
+
+  
+  @keyframes animateEarth { 
+    0%,100%{
+      /* background-position: 0 0; */
+      /* box-shadow: inset 0px -4px 23px 6px #C9040C,
+                  0 2px 200px #FF030B,
+                  0 2px 30px #F95E04; */
+
+    }
+    90%{
+      /* background-position: -1000px 0; */
+      /* box-shadow: inset 0px -4px 13px 6px #C9040C,
+                  0 2px 100px #FF030B,
+                  0 2px 10px #F95E04; */
+    }
+  }  
+
 </style>

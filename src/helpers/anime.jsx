@@ -35,7 +35,7 @@ export const animeStar = (target) => {
     targets: target,
     duration: 500,
     easing: 'linear',
-    // loop: true, // Se comenta por el consumo masivo de recursos de la computadora
+    loop: 2, // Se coloca 2 por temas de rendimiento al desarrollar, su valor es --> true
     delay: (el, i) => 100 * i
   })
   timeLine.add({
@@ -44,13 +44,16 @@ export const animeStar = (target) => {
     .add({
       opacity: 1
     })
+    .add({
+      opacity: 0
+    })
 }
 
 export const animeStarShoting = (starShoting) => {
   anime({
     targets: starShoting,
     easing: 'linear',
-    loop: 2,
+    loop: 2, // Se coloca 2 por temas de rendimiento al desarrollar, su valor es --> true
     delay: (el, i) => 1000 * i,
     opacity: [
       {

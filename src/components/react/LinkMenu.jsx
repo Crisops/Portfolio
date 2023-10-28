@@ -35,7 +35,8 @@ const LinkMenu = ({ id, title }) => {
     })
   }
 
-  const observer = new window.IntersectionObserver(sectionIntersecting, options)
+  // eslint-disable-next-line no-undef
+  const observer = new IntersectionObserver(sectionIntersecting, options)
   allSection.forEach(section => {
     observer.observe(section)
   })
