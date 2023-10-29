@@ -9,7 +9,7 @@ import SocialNetworks from "../react/SocialNetworks";
 ---
 
 <section id="contact" class="relative h-screen overflow-hidden bg-white dark:bg-[#0F0101]">
-  <Contact>
+  <Contact client:visible>
     <ContactFormBorder/>
   </Contact>
   <ContactPlanet>
@@ -17,5 +17,5 @@ import SocialNetworks from "../react/SocialNetworks";
     <ContactShoting client:visible/>
     <ContactEarth/>
   </ContactPlanet>
-  <SocialNetworks/>
+  <SocialNetworks client:visible/>
 </section>

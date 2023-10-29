@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import Card from './Card'
 
-const CardsProject = ({ urlImg, urlGithub, urlSite }) => {
+const CardProject = ({ urlImg, urlGithub, urlSite }) => {
   const overlay = useRef(null)
   const tapeHover = useRef(null)
   const tape = useRef(null)
@@ -41,4 +41,4 @@ const CardsProject = ({ urlImg, urlGithub, urlSite }) => {
   )
 }
 
-export default CardsProject
+export default CardProject
