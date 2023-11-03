@@ -459,3 +459,7 @@ export const IconLinkInd = ({ url }) => (
     </svg>
   </a>
 )
+
+export const IconLoader = () => (
+  <div className='border-[16px] border-transparent border-t-[16px] border-solid border-t-[#CC1C06] rounded-full w-8 h-8 animate-[spin_700ms_linear_infinite]'></div>
+)

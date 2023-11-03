@@ -17,6 +17,7 @@ const Card = ({ ...c }) => {
       onEnter={handleEnter}
       onLeave={handLeave}
       rotate
+      highlight
     >
       <div ref={overlay} className='absolute w-full h-full bg-gradient-to-t from-black z-[2] rounded-lg transition-transform duration-300'></div>
       <CardImage urlImg={urlImg} />

@@ -37,13 +37,22 @@ module.exports = {
           '100%': {
             transform: 'rotate(0deg)'
           }
+        },
+        spin: {
+          '0%': {
+            transform: 'rotate(0deg)'
+          },
+          '100%': {
+            transform: 'rotate(360deg)'
+          }
         }
       }
     },
     animation: {
       btnViewProyect: '5s linear infinite',
       circleForm: 'linear infinite',
-      circleForm2: 'linear infinite'
+      circleForm2: 'linear infinite',
+      spin: '500ms linear infinite'
     }
   },
   plugins: [

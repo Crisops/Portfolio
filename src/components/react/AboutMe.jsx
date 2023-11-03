@@ -28,7 +28,7 @@ const AboutMe = () => {
   }, [])
 
   return (
-    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20'>
+    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20 z-[2]'>
       <div className='flex justify-evenly flex-col'>
         <div className='relative flex flex-grow items-center justify-center'>
           <Line

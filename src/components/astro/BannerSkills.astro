@@ -5,7 +5,7 @@ const SvgAll = await Astro.glob('./svg/*.astro')
 <div class="relative w-full h-80 flex justify-center items-center my-5 gap-14">
   {SvgAll.map(svg => (
     <div class="[&>svg]:w-24 [&>svg]:h-24 [&>span]:uppercase font-bold italic text-center">
-      <svg.default animation="transition duration-300 ease-in-out hover:-translate-y-1" />
+      <svg.default animation="transition duration-300 ease-in-out hover:-translate-y-1 " />
     </div>
   ))}
 </div>
