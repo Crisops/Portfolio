@@ -25,7 +25,7 @@ const InfoMe = ({ buttons }) => {
 
   return (
     <>
-      <section id='home' className='relative w-screen h-screen bg-white grid grid-cols-2 dark:bg-[#0F0101]'>
+      <section id='home' className='relative w-screen h-screen grid grid-cols-2 bg-white dark:bg-[#0F0101]'>
         <HomeHeader />
         <GridBgHome />
         <div className='flex gap-9 flex-col justify-center pl-20'>

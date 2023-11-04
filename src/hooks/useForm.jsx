@@ -7,10 +7,22 @@ export const useForm = (validateForm) => {
     message: ''
   }
 
+  const initialSubject = {
+    start: 0,
+    end: 150
+  }
+
+  const initialTextArea = {
+    start: 0,
+    end: 255
+  }
+
   const [form, setForm] = useState(initialForm)
   const [error, setError] = useState({})
   const [loading, setLoading] = useState(false)
   const [response, setResponse] = useState(null)
+  const [limitSubject, setLimitSubject] = useState(initialSubject)
+  const [limitTextArea, setLimitTextArea] = useState(initialTextArea)
 
   const handleChange = (e) => {
     setForm({
@@ -19,9 +31,7 @@ export const useForm = (validateForm) => {
     })
   }
 
-  const handleChangeKeyUp = (e) => {
-    handleChange(e)
-    setError(validateForm(form))
+  const animateLabelText = (e) => {
     const label = e.target.parentElement.children[0]
 
     if (e.target.value <= 0) {
@@ -36,15 +46,32 @@ export const useForm = (validateForm) => {
     }
   }
 
+  const handleChangeKeyUp = (e) => {
+    handleChange(e)
+    setLimitSubject(prevent => ({ ...prevent, start: form.subject.length }))
+    setLimitTextArea(prevent => ({ ...prevent, start: form.message.length }))
+    setError(validateForm(form))
+    animateLabelText(e)
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+
     if (Object.entries(form).some(input => input[1] === '')) {
-      setResponse('Error. Al parecer se encuetran campos vacíos')
+      setResponse('Digite la información correctamente, antes de enviar los datos')
       setLoading(false)
       setTimeout(() => setResponse(null), 4000)
       return
     }
+
+    if (Object.keys(error).length > 0) {
+      setResponse(`Digita bien la información en el campo ${Object.keys(error).join(',')}`)
+      setTimeout(() => setResponse(null), 4000)
+      setLoading(false)
+      return
+    }
+
     try {
       const url = 'https://formsubmit.co/ajax/crialeperez1835@gmail.com'
       const options = {
@@ -61,11 +88,17 @@ export const useForm = (validateForm) => {
 
       setLoading(false)
       setResponse('Datos enviados. Gracias por tu mensaje')
-      setForm(initialForm)
+      resetForm()
       setTimeout(() => setResponse(null), 4000)
     } catch (e) {
       setResponse('Fallo al enviar los datos')
     }
+  }
+
+  const resetForm = () => {
+    setForm(initialForm)
+    setLimitSubject(initialSubject)
+    setLimitTextArea(initialTextArea)
   }
 
   return {
@@ -75,6 +108,8 @@ export const useForm = (validateForm) => {
     form,
     error,
     loading,
-    response
+    response,
+    limitSubject,
+    limitTextArea
   }
 }

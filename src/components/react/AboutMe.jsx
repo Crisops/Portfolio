@@ -125,7 +125,7 @@ const AboutMe = () => {
       <div className='flex-grow flex flex-col [&>article]:flex-grow [&>article]:flex [&>article]:flex-col [&>article]:justify-center [&>article]:pl-4'>
         <InfoMeAbout
           title='Educación'
-          description='Tecnólogo en Análisis y Desarrollo de Sistemas de Información que estudié en el SENA y me gradué en 2021.'
+          description='Tecnólogo en Análisis y Desarrollo de Sistemas de Información realizado en el (SENA) "Servicio Nacional de Aprendizaje" '
           colorTitle='text-red-600'
           colorDescription='text-zinc-600'
           animateTitle='animate-fade animate-once animate-duration-300 animate-delay-[400ms] animate-ease-in opacity-100'
