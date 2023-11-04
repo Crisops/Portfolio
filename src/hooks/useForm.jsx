@@ -58,7 +58,7 @@ export const useForm = (validateForm) => {
     e.preventDefault()
     setLoading(true)
 
-    if (Object.entries(form).some(input => input[1] === '')) {
+    if (Object.values(form).some(input => input === '')) {
       setResponse('Digite la información correctamente, antes de enviar los datos')
       setLoading(false)
       setTimeout(() => setResponse(null), 4000)
