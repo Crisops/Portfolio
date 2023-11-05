@@ -28,7 +28,7 @@ const AboutMe = () => {
   }, [])
 
   return (
-    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20 z-[2]'>
+    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20 z-[2] 2xl:pl-10 xl:pl-10 md:pl-10 max-[1024px]:w-[100vw] max-sm:px-5'>
       <div className='flex justify-evenly flex-col'>
         <div className='relative flex flex-grow items-center justify-center'>
           <Line
@@ -122,7 +122,7 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <div className='flex-grow flex flex-col [&>article]:flex-grow [&>article]:flex [&>article]:flex-col [&>article]:justify-center [&>article]:pl-4'>
+      <div className='flex-grow flex flex-col [&>article]:flex-grow [&>article]:flex [&>article]:flex-col [&>article]:justify-center [&>article]:pl-4 max-sm:[&>article]:px-4'>
         <InfoMeAbout
           title='Educación'
           description='Tecnólogo en Análisis y Desarrollo de Sistemas de Información realizado en el (SENA) "Servicio Nacional de Aprendizaje" '
@@ -136,7 +136,7 @@ const AboutMe = () => {
         />
         <InfoMeAbout
           title='Un poco sobre mí'
-          description='Soy un aprendiz de la tecnología. Las cosas que he aprendido en estos 2 años han sido fabulosas, mi auto dedicación y esfuerzo me han llevado a lo que soy hoy. En general me gusta compartir con la gente, me gusta compartir ideas porque siento y pienso que es la base para seguir aprendiendo y creciendo laboralmente.'
+          description='Soy un aprendiz de la tecnología. Las cosas que he aprendido en estos 2 años han sido fabulosas, mi auto dedicación y esfuerzo me han llevado a lo que soy hoy en día. En general me gusta compartir con la gente y sobre todo compartir ideas porque siento y pienso que es la base para seguir aprendiendo y creciendo laboralmente.'
           colorTitle='text-yellow-500'
           colorDescription='text-zinc-600'
           animateTitle='animate-fade animate-once animate-duration-300 animate-delay-[700ms] animate-ease-in opacity-100'

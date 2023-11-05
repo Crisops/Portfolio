@@ -62,9 +62,11 @@ export const FlagUs = () => (
 
 export const BgAboutLava = ({ props }) => {
   const { width, height, theme } = props
+  const POSITION_RECT_MACBOOK = 200
+  const POSITION_RECT_PC = 0
 
   return (
-    <svg id='e4k8Fi6ChjI1' width={`${width}`} height={`${height}`} viewBox={`0 0 ${width} ${height}`} shapeRendering='geometricPrecision' textRendering='geometricPrecision'>
+    <svg id='e4k8Fi6ChjI1' width={`${width}`} height={`${height}`} viewBox={`${width <= 1534 ? POSITION_RECT_MACBOOK : POSITION_RECT_PC} 0 ${width} ${height}`} shapeRendering='geometricPrecision' textRendering='geometricPrecision'>
       <defs>
         <linearGradient id='e4k8Fi6ChjI4-fill' x1='934' y1='0' x2='1918' y2='0' spreadMethod='pad' gradientUnits='userSpaceOnUse' gradientTransform='translate(0 0)'><stop id='e4k8Fi6ChjI4-fill-0' offset='0%' stopColor={`${theme === 'dark' ? '#190101' : '#FF030B'}`} stopOpacity={`${theme === 'null' && '1'}`} />
           <stop id='e4k8Fi6ChjI4-fill-1' offset='45%' stopColor={`${theme === 'dark' ? '#a50002' : '#FF030B'}`} stopOpacity={`${theme === 'null' && '0.2'}`} />
@@ -73,7 +75,7 @@ export const BgAboutLava = ({ props }) => {
       </defs>
       <g>
         <g mask='url(#e4k8Fi6ChjI5)'>
-          <rect width={`${width}`} height={`${height}`} x='0' y='0' rx='0' ry='0' fill='url(#e4k8Fi6ChjI4-fill)' />
+          <rect width={`${width <= 1534 ? width + POSITION_RECT_MACBOOK : width}`} height={`${height}`} x='0' y='0' rx='0' ry='0' fill='url(#e4k8Fi6ChjI4-fill)' />
           <mask id='e4k8Fi6ChjI5' mask-type='luminance' x='-150%' y='-150%' height='400%' width='400%'>
             <g>
               <path id='e4k8Fi6ChjI7' d='M2218,-0.5h-1271.406166c8.836556,0,16,7.163444,16,16s-7.163444,16-16,16L2218,31.5' transform='translate(31.6005 0)' fill='#fff' />
@@ -149,16 +151,16 @@ export const BgAboutLava = ({ props }) => {
 }
 
 export const IconBookReader = ({ focus, animate, fill, darkFill, darkDropShadow }) => (
-  <svg className={`relative ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow}`} fill='#000000' width='25px' height='30px' viewBox='0 0 512 512'>
+  <svg className={`relative ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow} w-7 h-7`} fill='#000000' viewBox='0 0 512 512'>
     <path d='M352 96c0-53.02-42.98-96-96-96s-96 42.98-96 96 42.98 96 96 96 96-42.98 96-96zM233.59 241.1c-59.33-36.32-155.43-46.3-203.79-49.05C13.55 191.13 0 203.51 0 219.14v222.8c0 14.33 11.59 26.28 26.49 27.05 43.66 2.29 131.99 10.68 193.04 41.43 9.37 4.72 20.48-1.71 20.48-11.87V252.56c-.01-4.67-2.32-8.95-6.42-11.46zm248.61-49.05c-48.35 2.74-144.46 12.73-203.78 49.05-4.1 2.51-6.41 6.96-6.41 11.63v245.79c0 10.19 11.14 16.63 20.54 11.9 61.04-30.72 149.32-39.11 192.97-41.4 14.9-.78 26.49-12.73 26.49-27.06V219.14c-.01-15.63-13.56-28.01-29.81-27.09z' />
   </svg>
 )
 
 export const IconGraduation = ({ focus, animate, fill, darkFill, darkDropShadow }) => (
   <svg
-    className={`relative ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow}`}
+    className={`relative w-8 h-8 ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow}`}
     fill='#000000' version='1.1' id='Layer_1'
-    width='30px' height='30px' viewBox='1052 796 200 200' enableBackground='new 1052 796 200 200'
+    viewBox='1052 796 200 200' enableBackground='new 1052 796 200 200'
   >
     <g>
       <path d='M1151.998,921.75c-4.129,0-8.17-0.771-12.01-2.292l-50.167-19.888c0,11.08,0,27.65,0,32.066c0,15.562,27.836,28.174,62.178,28.174s62.181-12.612,62.181-28.174v-32.067l-50.172,19.889C1160.168,920.979,1156.127,921.75,1151.998,921.75z' />
@@ -169,9 +171,9 @@ export const IconGraduation = ({ focus, animate, fill, darkFill, darkDropShadow 
 
 export const IconSurprise = ({ focus, animate, fill, darkFill, darkDropShadow }) => (
   <svg
-    className={`relative ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow}`}
+    className={`relative w-8 h-8 ${fill} opacity-0 ${focus && `${animate}`} ${darkFill} ${darkDropShadow}`}
     fill='#000000' version='1.1' id='Layer_1'
-    width='30px' height='30px' viewBox='0 0 246 260'
+    viewBox='0 0 246 260'
   >
     <path d='M137,50.6C95.3,32.9,47.1,52.4,29.4,94.1c-16,37.7-1.6,80.7,32.1,101.7c-12.9-0.5-17.2-0.2-19.1,0.8c-3.4,1.8-3.5,4.5-3.4,5.5c0.5,5.1,7,7.2,25.8,12.5c5.6,1.6,13.9,3.9,19.1,5.9c-5.7,0.8-14.8,1.2-20.9,1.5c-6.2,0.3-12,0.6-16.5,1.1c-4.1,0.5-10.9,1.2-10.9,6.5c-0.1,9.5,15,11,31,12.6c5.3,0.5,11.2,1.1,13,1.9c0.4,0.2,0.7,0.3,1,0.5c-3.3,2-13.4,4.9-31.9,4.9v8.4
     c9.1,0,38.8-0.9,41.1-12.1c0.5-2.2,0.1-6.5-7-9.4c-2.8-1.2-7.7-1.7-15.5-2.5c-4.7-0.5-12.8-1.3-18.2-2.6c4.2-0.4,9.7-0.6,14.2-0.8

@@ -56,7 +56,7 @@ const MenuNavbar = () => {
     <>
       <MenuButtonLinks handleHeroMenu={handleHeroMenu} heroState={hero} />
       <HeroMenuLinks links={links} refHero={heroMenu} refHeroLinks={heroMenuLinks} handleLinkHero={handleLinkHero} heroState={hero} />
-      <div className='max-lg:hidden fixed z-[51] right-0 bottom-0 w-40 h-48 pr-8 max-xl:top-8 max-xl:right-14 max-xl:w-1/2 max-xl:h-5'>
+      <div className='max-lg:hidden fixed z-[51] right-8 bottom-0 w-40 h-48 max-xl:top-8 max-xl:right-16 max-xl:w-1/2 max-xl:h-5'>
         <nav className='relative w-full h-full border-r-4 border-black flex pb-1 dark:border-[#4E0601] max-xl:border-none max-xl:dark:border-none'>
           <ul className='relative right-8 flex flex-grow flex-col max-xl:flex-row justify-between gap-1'>
             {
