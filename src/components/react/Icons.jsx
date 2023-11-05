@@ -188,7 +188,7 @@ export const IconSurprise = ({ focus, animate, fill, darkFill, darkDropShadow })
 
 export const IconDark = ({ handleChangeTheme }) => {
   return (
-    <svg onClick={handleChangeTheme} className='drop-shadow-[1px_1px_2px_#0d0d0d] hover:cursor-pointer' width='35px' height='35px' viewBox='0 0 24 24' fill='none'>
+    <svg onClick={handleChangeTheme} className='drop-shadow-[1px_1px_2px_#0d0d0d] hover:cursor-pointer max-xl:w-8 max-xl:h-8' width='35px' height='35px' viewBox='0 0 24 24' fill='none'>
       <path d='M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z' fill='#121212' />
     </svg>
   )
@@ -198,7 +198,7 @@ export const IconLight = ({ handleChangeTheme }) => {
   return (
     <svg
       onClick={handleChangeTheme}
-      className='drop-shadow-[1px_1px_2px_#FF1515] hover:cursor-pointer'
+      className='drop-shadow-[1px_1px_2px_#FF1515] hover:cursor-pointer max-xl:w-8 max-xl:h-8'
       version='1.0' id='Layer_1'
       width='35px' height='35px' viewBox='0 0 64 64' enableBackground='new 0 0 64 64' xmlSpace='preserve'
     >
@@ -462,4 +462,23 @@ export const IconLinkInd = ({ url }) => (
 
 export const IconLoader = () => (
   <div className='border-[16px] border-transparent border-t-[16px] border-solid border-t-[#CC1C06] rounded-full w-8 h-8 animate-[spin_700ms_linear_infinite]'></div>
+)
+
+export const IconMenuHero = () => (
+
+  <svg className='stroke-black transition duration-300 ease-in dark:transition dark:duration-300 dark:ease-in dark:stroke-[#560500] dark:hover:stroke-[#C70A01]' width='32px' height='32px' viewBox='0 0 24 24' fill='none' transform='matrix(-1, 0, 0, 1, 0, 0)'>
+
+    <g id='SVGRepo_bgCarrier' strokeWidth='0' />
+
+    <g id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round' />
+
+    <g id='SVGRepo_iconCarrier'> <path d='M4 6H20M4 12H14M4 18H9' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' /> </g>
+
+  </svg>
+)
+
+export const IconCloseHero = () => (
+  <svg className='fill-white transition duration-300 ease-in hover:drop-shadow-[0px_0px_4px_#ffffff] dark:transition dark:duration-300 dark:ease-in dark:fill-[#560500] dark:hover:fill-[#C70A01] dark:hover:drop-shadow-[0px_0px_4px_#C70A01]' width='32px' height='32px' viewBox='0 0 24 24' fill='none'>
+    <path d='M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z' />
+  </svg>
 )

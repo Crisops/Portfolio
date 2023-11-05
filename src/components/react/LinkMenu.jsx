@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-const LinkMenu = ({ id, title }) => {
+const LinkMenu = ({ id, title, handleLinkHero, heroState }) => {
   const link = useRef()
 
   const [entrySection, setEntrySection] = useState('home')
@@ -16,6 +16,10 @@ const LinkMenu = ({ id, title }) => {
 
   useEffect(() => {
     if (entrySection === 'about' && entrySection === id) {
+      if (heroState) {
+        setColor('text-[#FF0000]')
+        return
+      }
       setColor('text-[#000000]')
     } else {
       if (entrySection === id) {
@@ -24,7 +28,7 @@ const LinkMenu = ({ id, title }) => {
         setColor('text-[#BEBEBE]')
       }
     }
-  }, [entrySection])
+  }, [entrySection, heroState])
 
   const sectionIntersecting = (entries) => {
     entries.forEach(entry => {
@@ -43,7 +47,7 @@ const LinkMenu = ({ id, title }) => {
 
   return (
 
-    <a href={`#${id}`} ref={link} className={`relative flex w-full h-full justify-end items-center uppercase pr-2 ${color} font-bold text-sm font-Crimson_Pro hover:text-red-300`}>{title}</a>
+    <a href={`#${id}`} ref={link} onClick={handleLinkHero} className={`relative flex w-full h-full justify-end items-center uppercase pr-2 ${color} font-bold text-sm font-Crimson_Pro hover:text-red-300`}>{title}</a>
 
   )
 }
