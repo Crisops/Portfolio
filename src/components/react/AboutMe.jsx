@@ -28,7 +28,7 @@ const AboutMe = () => {
   }, [])
 
   return (
-    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20 z-[2] 2xl:pl-10 xl:pl-10 md:pl-10 max-[1024px]:w-[100vw] max-sm:px-5'>
+    <div ref={section} className='absolute top-0 left-0 flex w-[50vw] h-[100vh] px-20 z-[2] max-[1536px]:px-10 max-[1280px]:px-10 max-[1024px]:px-10 max-[768px]:px-10 max-[1024px]:w-[100vw] max-sm:px-5'>
       <div className='flex justify-evenly flex-col'>
         <div className='relative flex flex-grow items-center justify-center'>
           <Line

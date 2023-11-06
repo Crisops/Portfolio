@@ -3,10 +3,10 @@ const SvgAll = await Astro.glob('./svg/*.astro')
 
 
 ---
-<div class="relative w-full h-80 flex justify-center items-center my-5 gap-14">
+<div class="relative w-full h-full flex flex-wrap justify-center items-center py-20 gap-14 max-[800px]:gap-16 max-sm:gap-10 max-sm:px-4">
   {SvgAll.map(svg => (
-    <div class="[&>svg]:w-24 [&>svg]:h-24 [&>span]:uppercase font-bold italic text-center ">
-      <svg.default animation="transition duration-300 ease-in-out hover:-translate-y-1 " />
+    <div id="box_skills" class="flex flex-col justify-center items-center max-[1536px]:[&>svg]:w-20 max-[1536px]:[&>svg]:h-20 max-sm:[&>svg]:w-14 max-sm:[&>svg]:h-14 [&>svg]:w-24 [&>svg]:h-24 [&>span]:uppercase max-sm:[&>span]:text-sm [&>span]:text-lg font-bold italic text-center [&>svg]:grayscale [&>svg]:hover:grayscale-0 [&>svg]:opacity-30 [&>svg]:hover:opacity-100 [&>span]:grayscale [&>span]:hover:grayscale-0 [&>span]:opacity-70 [&>span]:hover:opacity-100">
+      <svg.default animation="transition duration-300 ease-in-out hover:-translate-y-1" />
     </div>
   ))}
 </div>
