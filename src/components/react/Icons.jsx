@@ -324,7 +324,7 @@ export const IconLight = ({ handleChangeTheme }) => {
 }
 
 export const IconHtml = () => (
-  <svg data-atropos-offset='5' className='w-9 h-8' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
+  <svg data-atropos-offset='5' className='w-9 h-8 max-sm:w-5 max-sm:h-5' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
     <path d='M6 28L4 3H28L26 28L16 31L6 28Z' fill='#E44D26' />
     <path d='M26 5H16V29.5L24 27L26 5Z' fill='#F16529' />
     <path d='M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z' fill='white' />
@@ -332,7 +332,7 @@ export const IconHtml = () => (
 )
 
 export const IconCss = () => (
-  <svg data-atropos-offset='5' className='w-9 h-8' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
+  <svg data-atropos-offset='5' className='w-9 h-8 max-sm:w-5 max-sm:h-5' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
     <path d='M6 28L4 3H28L26 28L16 31L6 28Z' fill='#1172B8' />
     <path d='M26 5H16V29.5L24 27L26 5Z' fill='#33AADD' />
     <path d='M19.5 17.5H9.5L9 14L17 11.5H9L8.5 8.5H24L23.5 12L17 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5Z' fill='white' />
@@ -353,7 +353,7 @@ export const IconMySQL = () => (
 )
 
 export const IconJavaScript = () => (
-  <svg data-atropos-offset='5' className='w-9 h-8' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
+  <svg data-atropos-offset='5' className='w-9 h-8 max-sm:w-5 max-sm:h-5' width='800px' height='800px' viewBox='0 0 32 32' fill='none'>
     <rect x='2' y='2' width='28' height='28' fill='#FFCA28' />
     <path d='M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z' fill='#3E3E3E' />
     <path d='M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z' fill='#3E3E3E' />
@@ -371,7 +371,7 @@ export const IconFigma = () => (
 )
 
 export const IconGitHub = () => (
-  <svg className='w-5 h-5' width='800px' height='800px' viewBox='0 0 20 20'>
+  <svg className='w-5 h-5 max-sm:w-4 max-sm:h-4' width='800px' height='800px' viewBox='0 0 20 20'>
     <g id='Page-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
       <g id='Dribbble-Light-Preview' transform='translate(-140.000000, -7559.000000)' fill='#FFFFFF'>
         <g id='icons' transform='translate(56.000000, 160.000000)'>
@@ -385,7 +385,7 @@ export const IconGitHub = () => (
 
 export const IconWorldSite = () => (
   <svg
-    className='w-5 h-5'
+    className='w-5 h-5 max-sm:w-4 max-sm:h-4'
     fill='#FFFFFF' height='800px' width='800px' viewBox='0 0 512 512' enableBackground='new 0 0 512 512'
   >
     <path d='M93.8,114.6c-4.7,1.1-1.7,0.9-5.6,1.4C71.5,119.6,83.9,122.8,93.8,114.6z M387.5,121.3c1.2-0.8,5.4-4.9-7.7-8.9
