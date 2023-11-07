@@ -45,6 +45,14 @@ module.exports = {
           '100%': {
             transform: 'rotate(360deg)'
           }
+        },
+        progress: {
+          '0%': {
+            width: '0'
+          },
+          '100%': {
+            width: '100%'
+          }
         }
       }
     },
@@ -52,7 +60,8 @@ module.exports = {
       btnViewProyect: '5s linear infinite',
       circleForm: 'linear infinite',
       circleForm2: 'linear infinite',
-      spin: '500ms linear infinite'
+      spin: '500ms linear infinite',
+      progress: '4s linear'
     }
   },
   plugins: [
