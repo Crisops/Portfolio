@@ -17,10 +17,11 @@ const ContactShoting = () => {
       const nodeStarShoting = document.querySelectorAll('#starShoting')
 
       setQuatityStarShoting(startsShoting)
-      animeStarShoting(nodeStarShoting)
-    }
 
-    getSizeWindow()
+      setTimeout(() => {
+        animeStarShoting(nodeStarShoting)
+      }, 3000)
+    }
 
     setSizeWindow(window.addEventListener('resize', getSizeWindow))
 
