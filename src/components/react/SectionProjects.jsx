@@ -18,7 +18,7 @@ const SectionProjects = () => {
        ${viewMore ? '' : 'before:z-[10]'}`}
       >
         <CardProject
-          urlImg='/img/cloneInstagram.webp'
+          urlImg='/cloneInstagram.webp'
           urlGithub='https://github.com/Crisops/Clone-Instagram'
           urlSite='https://www.instagram.com/cris.alejo13/'
         />
