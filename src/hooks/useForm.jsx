@@ -58,7 +58,7 @@ export const useForm = (validateForm) => {
     e.preventDefault()
     setLoading(true)
 
-    if (Object.values(form).some(input => input === '')) {
+    if (Object.values(form).every(input => input === '')) {
       setResponse('Digite la información correctamente, antes de enviar los datos')
       setLoading(false)
       setTimeout(() => setResponse(null), 4000)
@@ -66,7 +66,7 @@ export const useForm = (validateForm) => {
     }
 
     if (Object.keys(error).length > 0) {
-      setResponse(`Digita bien la información en el campo ${Object.keys(error).join(',')}`)
+      setResponse(`Digita bien la información en el campo ${Object.keys(error).join(', ')}`)
       setTimeout(() => setResponse(null), 4000)
       setLoading(false)
       return
