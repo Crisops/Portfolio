@@ -22,31 +22,6 @@ const SectionProjects = () => {
           urlGithub='https://github.com/Crisops/Clone-Instagram'
           urlSite='https://www.instagram.com/cris.alejo13/'
         />
-        <CardProject
-          urlImg='/img/cloneInstagram.webp'
-          urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
-        />
-        <CardProject
-          urlImg='/img/cloneInstagram.webp'
-          urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
-        />
-        <CardProject
-          urlImg='/img/cloneInstagram.webp'
-          urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
-        />
-        <CardProject
-          urlImg='/img/cloneInstagram.webp'
-          urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
-        />
-        <CardProject
-          urlImg='/img/cloneInstagram.webp'
-          urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
-        />
       </div>
       <div className='absolute top-0 left-0 w-full h-full pointer-events-none'>
         <ButtonShowProjects handleMoreProject={handleMoreProject} viewMore={viewMore} />
