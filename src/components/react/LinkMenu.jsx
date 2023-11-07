@@ -11,10 +11,19 @@ const LinkMenu = ({ id, title, handleLinkHero, heroState }) => {
   const options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.9
+    threshold: 0.5
   }
 
   useEffect(() => {
+    const sectionIntersecting = (entries) => {
+      entries.forEach(entry => {
+        const { isIntersecting, target } = entry
+        if (isIntersecting) {
+          setEntrySection(target.id)
+        }
+      })
+    }
+
     if (entrySection === 'about' && entrySection === id) {
       if (heroState) {
         setColor('text-[#FF0000]')
@@ -28,22 +37,13 @@ const LinkMenu = ({ id, title, handleLinkHero, heroState }) => {
         setColor('text-[#BEBEBE]')
       }
     }
-  }, [entrySection, heroState])
 
-  const sectionIntersecting = (entries) => {
-    entries.forEach(entry => {
-      const { isIntersecting, target } = entry
-      if (isIntersecting) {
-        setEntrySection(target.id)
-      }
+    // eslint-disable-next-line no-undef
+    const observer = new IntersectionObserver(sectionIntersecting, options)
+    allSection.forEach(section => {
+      observer.observe(section)
     })
-  }
-
-  // eslint-disable-next-line no-undef
-  const observer = new IntersectionObserver(sectionIntersecting, options)
-  allSection.forEach(section => {
-    observer.observe(section)
-  })
+  }, [entrySection, heroState])
 
   return (
 

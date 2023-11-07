@@ -1,6 +1,6 @@
 const ContactInput = ({ className, type, name, id, placeholder, value, handleChange, handleChangeKeyUp, error, limitCharStart, limitCharEnd }) => {
   return (
-    <div className='relative w-[400px] flex justify-center'>
+    <div className='relative w-[400px] max-[1536px]:w-[350px] max-[1024px]:w-[400px] max-[640px]:w-[320px] flex justify-center'>
       <label className='absolute left-5 top-1/2 bg-white -translate-y-1/2 text-sm font-Hind_Guntur text-neutral-400 dark:text-neutral-500 transition-all duration-100 ease-in dark:bg-[#0F0101]' htmlFor={id}>{placeholder}</label>
       <input
         id={id}
