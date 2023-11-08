@@ -73,7 +73,7 @@ export const useForm = (validateForm) => {
     }
 
     try {
-      const url = 'https://formsubmit.co/ajax/crialeperez1835@gmail.com'
+      const url = 'https://formsubmit.co/ajax/2c2e6c9463d71bfa8e4d6dd57e9cb952 '
       const options = {
         method: 'POST',
         headers: {
