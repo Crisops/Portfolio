@@ -61,7 +61,7 @@ const ContactForm = ({ children }) => {
           {loading && <IconLoader />}
         </form>
       </div>
-      <div className={`absolute left-1/2 -translate-x-1/2 transition duration-300 ease-in-out ${response ? 'translate-y-0' : 'translate-y-[200%]'} bottom-16 flex justify-center items-center`}>
+      <div className={`absolute left-1/2 -translate-x-1/2 transition duration-300 ease-in-out ${response ? 'translate-y-0' : 'translate-y-[200%]'} bottom-16 flex justify-center items-center z-20`}>
         <div className='w-96 max-sm:w-80 h-16 rounded py-2 px-3 bg-zinc-950 dark:bg-[#150101] text-center'>
           <div>
             <span className='text-white dark:text-white font-Hind_Vadodara text-center text-sm'>{response}</span>
