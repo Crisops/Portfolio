@@ -57,6 +57,9 @@ export const animeStarShoting = (starShoting) => {
     delay: (el, i) => 700 * i,
     opacity: [
       {
+        value: '0'
+      },
+      {
         duration: 700,
         value: '1'
       }
