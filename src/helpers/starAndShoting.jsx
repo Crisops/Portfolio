@@ -20,7 +20,7 @@ export const getStartShoting = ({ START_SHOTING, height, width }) => {
     const pl = `${Math.random() * width}px`
     const pb = `${Math.random() * height}px`
 
-    const element = <i key={i} id='starShoting' style={{ left: pl, bottom: pb }} className='absolute right-0 w-[100px] h-[2px] rounded-full bg-gradient-to-br from-zinc-900 dark:bg-gradient-to-br dark:from-red-600'></i>
+    const element = <i key={i} id='starShoting' style={{ left: pl, bottom: pb }} className='absolute right-0 w-[100px] h-[2px] rounded-full bg-gradient-to-br from-zinc-900 dark:bg-gradient-to-br dark:from-red-600 opacity-0'></i>
     array.push(element)
   }
   return array

@@ -21,6 +21,8 @@ const ContactShoting = () => {
       animeStarShoting(nodeStarShoting)
     }
 
+    getSizeWindow()
+
     setSizeWindow(window.addEventListener('resize', getSizeWindow))
 
     return () => {
