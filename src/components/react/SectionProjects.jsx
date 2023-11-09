@@ -20,7 +20,7 @@ const SectionProjects = () => {
         <CardProject
           urlImg='/Portfolio/cloneInstagram.webp'
           urlGithub='https://github.com/Crisops/Clone-Instagram'
-          urlSite='https://www.instagram.com/cris.alejo13/'
+          urlSite='https://crisops.github.io/Clone-Instagram/'
         />
       </div>
       <div className='absolute top-0 left-0 w-full h-full pointer-events-none'>
