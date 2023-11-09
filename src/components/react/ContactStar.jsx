@@ -15,7 +15,6 @@ const ContactStar = () => {
       setQuatityStar(starts)
       animeStar(nodeStar)
     }
-
     getSizeWindow()
 
     window.addEventListener('resize', getSizeWindow)
@@ -23,7 +22,7 @@ const ContactStar = () => {
     return () => {
       window.removeEventListener('resize', getSizeWindow)
     }
-  }, [quatityStar])
+  }, [])
 
   return (
     <div className='absolute w-full h-full'>
