@@ -31,7 +31,7 @@ const ContactShoting = () => {
   return (
     <div ref={container} className='relative w-[100vw] h-[100vh] -rotate-45'>
       {
-        quatityStarShoting.length !== 0 &&
+        quatityStarShoting !== 0 &&
         quatityStarShoting.map(el => (el))
       }
     </div>
