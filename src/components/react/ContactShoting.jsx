@@ -18,9 +18,7 @@ const ContactShoting = () => {
 
       setQuatityStarShoting(startsShoting)
 
-      setTimeout(() => {
-        animeStarShoting(nodeStarShoting)
-      }, 3000)
+      animeStarShoting(nodeStarShoting)
     }
 
     setSizeWindow(window.addEventListener('resize', getSizeWindow))
