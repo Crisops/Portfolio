@@ -27,10 +27,10 @@ const ContactShoting = () => {
     return () => {
       window.removeEventListener('resize', getSizeWindow)
     }
-  }, [])
+  }, [quatityStarShoting])
 
   return (
-    <div ref={container} className='relative w-[100vw] h-[100vh] -rotate-45'>
+    <div ref={container} className='relative w-[100vw] h-[100vh] -rotate-45 max-xl:hidden'>
       {
         quatityStarShoting !== 0 &&
         quatityStarShoting.map(el => (el))

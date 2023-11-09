@@ -3,8 +3,6 @@ import { animeStar } from '../../helpers/anime'
 import { getStart } from '../../helpers/starAndShoting'
 
 const ContactStar = () => {
-  const [sizeWindow, setSizeWindow] = useState(0)
-
   const [quatityStar, setQuatityStar] = useState([])
 
   const STARS = 30
@@ -20,12 +18,12 @@ const ContactStar = () => {
 
     getSizeWindow()
 
-    setSizeWindow(window.addEventListener('resize', getSizeWindow))
+    window.addEventListener('resize', getSizeWindow)
 
     return () => {
       window.removeEventListener('resize', getSizeWindow)
     }
-  }, [sizeWindow])
+  }, [quatityStar])
 
   return (
     <div className='absolute w-full h-full'>
