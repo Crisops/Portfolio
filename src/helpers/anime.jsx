@@ -53,7 +53,7 @@ export const animeStarShoting = (starShoting) => {
   anime({
     targets: starShoting,
     easing: 'linear',
-    loop: true, // Se coloca 2 por temas de rendimiento al desarrollar, su valor es --> true
+    loop: false, // Se coloca 2 por temas de rendimiento al desarrollar, su valor es --> true
     delay: (el, i) => 700 * i,
     opacity: [
       {
