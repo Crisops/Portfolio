@@ -3,7 +3,6 @@ import { getStartShoting } from '../../helpers/starAndShoting'
 import { animeStarShoting } from '../../helpers/anime'
 
 const ContactShoting = () => {
-  const [sizeWindow, setSizeWindow] = useState(null)
   const container = useRef()
 
   const [quatityStarShoting, setQuatityStarShoting] = useState([])
@@ -23,12 +22,12 @@ const ContactShoting = () => {
 
     getSizeWindow()
 
-    setSizeWindow(window.addEventListener('resize', getSizeWindow))
+    window.addEventListener('resize', getSizeWindow)
 
     return () => {
       window.removeEventListener('resize', getSizeWindow)
     }
-  }, [sizeWindow])
+  }, [])
 
   return (
     <div ref={container} className='relative w-[100vw] h-[100vh] -rotate-45'>
